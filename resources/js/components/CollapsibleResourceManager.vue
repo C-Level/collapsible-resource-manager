@@ -48,9 +48,12 @@
 
                 </div>
 
-                <Badge :label="data.badge">
-                    {{ data.label }}
-                </Badge>
+                <div class="flex flex-auto">
+                    <div class="group-icon" v-if="data.icon" v-html="data.icon"/>
+                    <Badge :label="data.badge">
+                        {{ data.label }}
+                    </Badge>
+                </div>
 
             </h4>
 
@@ -173,5 +176,9 @@
         margin-top: 0;
     }
 
+    .group-icon {
+        margin-right: 5px;
+        margin-left: -10px;
+    }
 
 </style>
